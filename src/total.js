@@ -1,6 +1,5 @@
 total = document.getElementById('total');
 
-
 let TotalAmount = () => {
 	if (basket.length !== 0) {
 		let amount = basket
@@ -53,4 +52,19 @@ let TotalAmount = () => {
 
 TotalAmount();
 
+function changeText() {
+	if (input.checked) {
+		let sum = basket
+			.map((x) => {
+				let { id, item } = x;
+				let filterData = cartItemsData.find((x) => x.id === id);
+				return filterData.price * item;
+			})
+			.reduce((x, y) => x + y, 0);
+		buttonDeliver.innerText = `Оплатить ${sum}`
+	} else {
+		buttonDeliver.innerText = "Заказать"
+	}
+}
 
+changeText();

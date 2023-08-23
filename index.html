@@ -72,8 +72,6 @@
             <div class="cart__grid card__grid-two">
                 <div class="cart__about">
                     <div class="cart__item" id="total">
-
-
                     </div>
 
                     <div class="cart__delivery">
@@ -101,7 +99,7 @@
                         <p class="cart__payment-card_num">1234 12•• •••• 1234</p>
                     </div>
                     <label class="cart__label">
-                        <input class="cart__checkbox" type="checkbox" class="cart__checked" checked/>
+                        <input class="cart__checkbox" type="checkbox" class="cart__checked" id = "cart__checked-change" onclick="changeText()" checked/>
                         <span></span>
                         <p class="cart__text">Списать оплату сразу</p>
                     </label>
@@ -110,7 +108,7 @@
                     </p>
                 </div>
 
-                <button class="cart__payment-button">
+                <button class="cart__payment-button" id="button__deliver">
                     Заказать
                 </button>
                 <div class="cart__payment-agree">

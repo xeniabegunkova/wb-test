@@ -44,12 +44,10 @@ const generateCart = () => {
 				${left}
 			</p>
 			<div class="card__counter-buttons">
-				<div class="card__counter-like">
-					<img class="icons" src="./images/like.svg" alt="icon">
-				</div>
-				<div class="card__counter-delete">
-					<img class="icons" src="./images/del.svg" alt="icon">
-				</div>
+				<button class="card__counter-like" id="like" onclick="changeColor()"></button>
+				<button class="card__counter-delete">
+					<img id = "delete" class="icons" src="./images/del.svg" alt="icon">
+				</button>
 			</div>
 		</div>
 	
@@ -64,6 +62,11 @@ const generateCart = () => {
 }
 
 generateCart();
+const like = document.getElementById('like');
+
+function changeColor() {
+}
+
 
 const increment = (id) => {
 	const selectedItem = id;
@@ -107,6 +110,7 @@ const update = (id) => {
 	document.getElementById(id).innerHTML = search.item;
 	calculation();
 	TotalAmount();
+	changeText();
 }
 
 const calculation = () => {
@@ -115,3 +119,4 @@ const calculation = () => {
 }
 
 calculation(); //everytime update calculation is work
+

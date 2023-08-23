@@ -202,6 +202,25 @@
 
 .card__counter-like {
     margin-right: 16px;
+    border: none;
+    background-color: var(--primary-background);
+    background-image: url(../../images/like.svg);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.card__counter-delete {
+    margin-right: 16px;
+    border: none;
+    background-color: var(--primary-background);
+}
+
+.card__counter-like.active {
+    background-image: url(../../images/like-pink.svg);
+    width: 20px;
+    height: 20px;
 }
 
 .card .icons {

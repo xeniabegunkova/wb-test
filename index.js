@@ -9,6 +9,10 @@ let headerTitle = document.querySelector('.header__title');
 let headerButton = document.querySelector('.header__button');
 let headerMenuButtons = document.querySelector('.header__menu-btn');
 
+const input = document.getElementById('cart__checked-change');
+
+const buttonDeliver = document.getElementById('button__deliver');
+
 //burger menu
 
 menuBtn.addEventListener('click', function () {
@@ -33,4 +37,9 @@ function checkAll(obj) {
 		}
 	}
 }
+
+
+
+
+
 
