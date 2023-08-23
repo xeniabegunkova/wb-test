@@ -1,0 +1,325 @@
+:root {
+    --primary-background: #F6F6FA;
+    --purple-background: #6725A8;
+    --white-text: #FFF;
+    --active-button: #CB11AB;
+    --icon-amount: #F55123;
+}
+
+.header {
+    padding: 16px 17px 20px 24px;
+    height: 85px;
+    display: grid;
+    grid-template-columns: 170px 1fr 169px;
+    column-gap: 32px;
+    justify-content: space-between;
+    background-color: var(--purple-background);
+    color: var(--white-text);
+}
+
+.header__info {
+    display: flex;
+}
+
+.header__menu.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+    background-color: var(--purple-background);
+    animation: ani 1s forwards;
+}
+
+@keyframes ani {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.header__menu.active {
+    transform: translateX(0);
+    transition: transform 0.5s;
+}
+
+.header__menu-items.active {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__menu li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__menu-btn {
+    width: 46.4px;
+    height: 46.4px;
+    margin-right: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 8px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.header__menu-btn span {
+    width: 28px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    gap: 6px;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    background-color: var(--white-text);
+    transition: all 0.5s;
+}
+
+.header__menu-btn span:nth-of-type(2) {
+    top: calc(50% - 5px);
+}
+
+.header__menu-btn span:nth-of-type(3) {
+    top: calc(50% + 5px);
+}
+
+.header__menu-btn.active span:nth-of-type(1) {
+    display: none;
+}
+
+.header__menu-btn.active span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);
+}
+
+.header__menu-btn.active span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg);
+}
+
+.header__title {
+    width: 107px;
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 24px;
+    font-variant: all-small-caps;
+    letter-spacing: 0.56px;
+}
+
+.header__form {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header__ipnut,
+.header__button {
+    border: none;
+    outline: none;
+    border-radius: 36px;
+}
+
+.header__ipnut {
+    width: 100%;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.20);
+    padding-left: 20px;
+    color: var(--white-text);
+    letter-spacing: 0.56px;
+}
+
+.header__ipnut::placeholder {
+    font-family: Segoe UI;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--white-text);
+    opacity: 0.5;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+
+.header__button {
+    margin: 0;
+    padding: 0;
+    height: 26px;
+    width: 26px;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    background: transparent;
+    cursor: pointer;
+    background-image: url(../../images/search.svg);
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 28px;
+}
+
+.header__button-img {
+    width: 24px;
+    height: 24px;
+}
+
+.header__menu-li {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+.header__menu-items {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    column-gap: 43px;
+    list-style: none;
+}
+
+.header__menu-item {
+    margin: 0 auto;
+    color: var(--white-text);
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    text-decoration: none;
+}
+
+.header__amount {
+    width: 12px;
+    height: 16px;
+    position: absolute;
+    top: -5px;
+    right: 7px;
+    background-color: var(--icon-amount);
+    border-radius: 16px;
+    padding: 0px 2px;
+    align-items: center;
+    font-family: Segoe UI;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {}
+
+@media screen and (max-width: 767px) {
+    .body.active {
+        overflow: hidden;
+    }
+
+    .header {
+        padding: 11px 13px 14px;
+        grid-template-columns: 1fr 28px;
+        column-gap: 20px;
+    }
+
+    .header__menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        transform: translateX(-100%);
+        transition: transform 0.5s;
+        background-color: var(--purple-background);
+    }
+
+    .header__menu.active {
+        transform: translateX(0);
+    }
+
+    .header__menu-items {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header__menu li {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header__menu-items {
+        row-gap: 20px;
+    }
+
+
+    .header__menu-btn {
+        width: 28px;
+        height: 28px;
+        margin-right: 20px;
+        border: none;
+        cursor: none;
+    }
+
+    .header__menu-btn span {
+        width: 28px;
+    }
+
+    .header__menu-btn span:nth-of-type(3) {
+        width: 24px;
+        left: 12.2px;
+        height: 2.4px;
+    }
+
+    .header__menu-btn.active span:nth-of-type(3) {
+        width: 28px;
+    }
+
+    .header__title {
+        width: 198px;
+        margin: 0;
+        padding: 0;
+        font-family: Segoe UI;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        font-variant: all-small-caps;
+        letter-spacing: 0.52px;
+    }
+
+    .header__form {
+        position: inherit;
+    }
+
+    .header__ipnut {
+        display: none;
+    }
+
+    .header__button {
+        background-image: url(../../images/search2.svg);
+    }
+
+    .header__ipnut.active {
+        display: flex;
+    }
+
+}

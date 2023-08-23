@@ -1,0 +1,216 @@
+:root {
+    --primary-background: #F6F6FA;
+    --purple-background: #6725A8;
+    --white-text: #FFF;
+    --active-button: #CB11AB;
+    --color-grey: #A0A0A4;
+    --color-red: #FF3B30;
+    --price-sale: #A0A0A4;
+    --color-green: #0CB477;
+}
+
+.card__grid-two {
+    background-color: var(--white-text);
+    width: 429px;
+    max-height: 572px;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.30), 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+.cart__about {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 24px 24px;
+}
+
+.cart__details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart__details-title {
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.24px;
+    margin-bottom: 8px;
+}
+
+.cart__details-price {
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+}
+
+.cart__details-info {
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.cart__delivery {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart__delivery-info {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    margin-bottom: 4px;
+}
+
+.cart__delivery-title {
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.cart__delivery-pen {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.cart__delivery-adress {
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    margin-bottom: 4px;
+}
+
+.cart__delivery-date {
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--active-button);
+}
+
+.cart__information {
+    display: flex;
+    margin-top: 20px;
+    margin: 12px 24px 24px;
+}
+
+.cart__information-img {
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+}
+
+.cart__cart__information-about {
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.color {
+    color: var(--color-green)
+}
+
+.cart__payment {
+    display: flex;
+    flex-direction: column;
+    margin: 0 24px 32px;
+}
+
+.cart__details-title {
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.cart__payment-card {
+    display: flex;
+}
+
+.cart__payment-card_img {
+    width: 30px;
+    height: 9.333px;
+    margin-bottom: 24px;
+}
+
+.cart__payment-card_num {
+    margin: 0;
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.cart__text {
+    margin: auto;
+    padding: 0;
+    margin-left: 8px;
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.cart__payment-info {
+    margin-top: 8px;
+    margin-left: 0;
+}
+
+.cart__payment-button {
+    margin: 0 24px 12px;
+    background-color: var(--active-button);
+    color: var(--white-text);
+    width: 381px;
+    border: none;
+    border-radius: 8px;
+    height: 44px;
+    padding: 0px 32px 5px 32px;
+    text-align: center;
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.cart__payment-agree {
+    display: flex;
+    margin: 0 24px 24px;
+}
+
+.cart__payment-agree_img {
+    width: 13px;
+    height: 24px;
+}

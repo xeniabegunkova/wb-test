@@ -1,0 +1,280 @@
+:root {
+    --primary-background: #F6F6FA;
+    --purple-background: #6725A8;
+    --white-text: #FFF;
+    --active-button: #CB11AB;
+    --color-grey: #A0A0A4;
+    --color-red: #FF3B30;
+    --price-sale: #A0A0A4;
+    --color-green: #0CB477;
+}
+
+.cart {
+    margin: 0;
+    padding: 0;
+
+}
+
+.cart__title {
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: -0.28px;
+}
+
+.cart__container {
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 891px 429px;
+    gap: 54px;
+    background-color: var(--primary-background);
+    margin-top: -34px;
+    padding: 44px 24px 0px;
+    border-radius: 24px 24px 0px 0px;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.cart__items {
+    margin: 0;
+    padding: 0;
+    margin: 28px 32px 37.5px 24px;
+    width: 891px;
+}
+
+.cart__input {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+}
+
+.card:first-child {
+    margin-top: 11px;
+}
+
+.card__input {
+    margin: 0;
+    height: 96px;
+    text-align: center;
+    align-items: center;
+    padding-top: 37px;
+}
+
+.card__image {
+    width: 72px;
+    height: 96px;
+    margin-left: 12px;
+    margin-right: 16px;
+}
+
+.cart__checkbox {
+    margin-right: 11px;
+}
+
+.card__info {
+    margin-right: 202px;
+    margin-bottom: 32px;
+}
+
+.card__info:last-child {
+    margin-bottom: 0;
+}
+
+.card__title {
+    margin: 0;
+    padding: 0;
+    width: 275px;
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.card__item {
+    display: flex;
+}
+
+.card__items {
+    margin: 8px 16px 8px 0;
+}
+
+.card__items:last-child {
+    margin-right: 0;
+}
+
+.grey {
+    color: var(--color-grey);
+    margin: 0;
+    margin-right: 6px;
+    width: fit-content;
+}
+
+.grey__container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 8px;
+}
+
+.card__items-img {
+    height: 20px;
+}
+
+.card__counter {
+    margin: 0;
+    margin-right: 16px;
+    position: relative;
+    margin-right: 56px;
+}
+
+.counter {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    border: 1px solid var(--white-text);
+    background-color: var(--white-text);
+    width: 100px;
+    height: 44px;
+}
+
+.counter__image {
+    margin: 0;
+    padding: 0;
+    width: 9px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.counter__button_min {
+    margin-left: 8px;
+}
+
+.counter__button_plus {
+    margin-right: 8px;
+}
+
+.counter__input {
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.card__counter-text {
+    margin: 0;
+    padding: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--color-red)
+}
+
+.card__counter-buttons {
+    display: flex;
+    position: absolute;
+    right: 0;
+}
+
+.card__counter-like {
+    margin-right: 16px;
+}
+
+.card .icons {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.price {
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+}
+
+.price-sale {
+    color: var(--price-sale);
+    font-family: Segoe UI;
+    text-decoration: line-through;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    stroke-width: 1px;
+}
+
+label input {
+    display: none;
+    /* <--скрываем дефолтный чекбокс */
+}
+
+label span {
+    /* <-- стилизируем новый */
+    width: 22px;
+    height: 22px;
+    border: 0.5px solid #000;
+    display: inline-block;
+    position: relative;
+    background-color: var(--primary-background);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+[type=checkbox]:checked+span:before {
+    /* <-- ставим иконку, когда чекбокс включен  */
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 100%;
+    height: 100%;
+    font-size: 23px;
+    border: none;
+    background-image: url(../../images/checkbox.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1.5px;
+}
+
+.cart__choose {
+    margin: 0;
+    margin-left: 12px;
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.cart__label {
+    display: flex;
+}

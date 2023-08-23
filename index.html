@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="./pages/index.css">
+    <title>Товары и точка</title>
+</head>
+
+<body class="body">
+
+    <header class="header">
+
+        <div class="header__info">
+            <div class="header__menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <h1 class="header__title">Товары и точка</h1>
+        </div>
+
+        <form class="header__form">
+            <input class="header__ipnut" placeholder="Я ищу..." type="search">
+            <button class="header__button" type="submit"></button>
+        </form>
+
+        <div class="header__menu">
+            <nav class="header__menu-nav">
+                <ul class="header__menu-items">
+                    <li class="header__menu-li">
+                        <a href="profile" class="header__menu-item">
+                            <img class="header__menu-image" src="./images/profile.svg" alt="profile">
+                            Профиль
+                        </a>
+                    </li>
+                    <li class="header__menu-li">
+                        <a href="#favorites" class="header__menu-item">
+                            <img class="header__menu-image" src="./images/shoppingcart.svg" alt="shopping cart">
+                            Корзина
+                        </a>
+                        <div id="amount" class="header__amount">0</div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="cart">
+        <div class="cart__container">
+            <div class="cart__grid">
+                <h4 class="cart__title">Корзина</h4>
+                <form class="cart__items">
+                    <div class="cart__input">
+                        <label class="cart__label">
+                            <input class="cart__checkbox" type="checkbox" class="cart__checked"
+                                onclick="checkAll(this)" />
+                            <span></span>
+                            <p class="cart__choose">Выбрать все</p>
+                        </label>
+                        <img class="arrow" src="./images/icon.svg">
+                    </div>
+                    <div class="container" id="cart">
+                    </div>
+                </form>
+            </div>
+
+            <div class="cart__grid card__grid-two">
+                <div class="cart__about">
+                    <div class="cart__item" id="total">
+                        <div class="cart__details">
+                            <h4 class="cart__details-title">Итого</h4>
+                            <p class="cart__details-price">cc</p>
+                        </div>
+                        <div class="cart__details">
+                            <p class="cart__details-info" id="total"> товара</p>
+                            <p class="cart__details-info">cc</p>
+                        </div>
+                        <div class="cart__details">
+                            <p class="cart__details-info">Скидка</p>
+                            <p class="cart__details-info">cc</p>
+                        </div>
+                        <div class="cart__details">
+                            <p class="cart__details-info">Доставка</p>
+                            <p class="cart__details-info">Бесплатно</p>
+                        </div>
+                    </div>
+
+                    <div class="cart__delivery">
+                        <div class="cart__delivery-info">
+                            <h5 class="cart__delivery-title">Доставка в пункт выдачи</h5>
+                            <img src="./images/pen.svg" alt="pen" class="cart__delivery-pen">
+                        </div>
+                        <p class="cart__delivery-adress">
+                            Бишкек, улица Ахматбека Суюмбаева, 12/1
+                        </p>
+                        <p class="cart__delivery-date">5–8 фев</p>
+                    </div>
+                </div>
+
+                <div class="cart__information">
+                    <img class="cart__information-img" src="./images/price-shipping.svg" alt="img">
+                    <p class="cart__cart__information-about">Обратная доставка товаров на склад при отказе — <span
+                            class="color">бесплатно</span></p>
+                </div>
+
+                <div class="cart__payment">
+                    <h4 class="cart__details-title">Оплата картой</h4>
+                    <div class="cart__payment-card">
+                        <img class="cart__payment-card_img" src="./images/mir.svg" alt="bank">
+                        <p class="cart__payment-card_num">1234 12•• •••• 1234</p>
+                    </div>
+                    <label class="cart__label">
+                        <input class="cart__checkbox" type="checkbox" class="cart__checked" checked/>
+                        <span></span>
+                        <p class="cart__text">Списать оплату сразу</p>
+                    </label>
+                    <p class="cart__text cart__payment-info">
+                        Спишем оплату с карты при получении
+                    </p>
+                </div>
+
+                <button class="cart__payment-button">
+                    Заказать
+                </button>
+                <div class="cart__payment-agree">
+                    <img class="cart__payment-agree_img" src="./images/Frame277132151.svg" alt="img">
+                    <p class="cart__text cart__payment-agree_text">
+                        Соглашаюсь с правилами пользования торговой площадкой и возврата
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="./src/utils.js"></script>
+    <script src="./index.js"></script>
+    <script src="./src/cart.js"></script>
+    <script src="./src/total.js"></script>
+
+</body>
+
+</html>
