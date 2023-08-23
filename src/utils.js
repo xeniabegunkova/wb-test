@@ -18,8 +18,8 @@ const cartItemsData = [{
 	size: '',
 	stock: 'Коледино WB',
 	company: 'OOO Мегапрофстиль',
-	price: '2 100 047',
-	sale: '2 300 047',
+	price: '2100047',
+	sale: '2300047',
 	left: '',
 },
 {

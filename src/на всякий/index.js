@@ -1,5 +1,6 @@
 const cart = document.getElementById('cart');
-let basket = JSON.parse(localStorage.getItem('data')) || [];
+
+const basket = JSON.parse(localStorage.getItem('data')) || [];
 
 const generateCart = () => {
 	return (cart.innerHTML = cartItemsData.map((x) => {
@@ -106,7 +107,6 @@ const update = (id) => {
 	const search = basket.find((x) => x.id === id);
 	document.getElementById(id).innerHTML = search.item;
 	calculation();
-	TotalAmount();
 }
 
 const calculation = () => {
