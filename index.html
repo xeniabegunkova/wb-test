@@ -50,82 +50,150 @@
         </div>
     </header>
 
-    <section class="cart">
-        <div class="cart__container">
-            <div class="cart__grid">
-                <h4 class="cart__title">Корзина</h4>
-                <form class="cart__items">
-                    <div class="cart__input">
+    <main>
+        <section class="cart">
+            <div class="cart__container">
+                <div class="cart__grid">
+                    <h4 class="cart__title">Корзина</h4>
+                    <form class="cart__items">
+                        <div class="cart__input">
+                            <label class="cart__label">
+                                <input class="cart__checkbox" type="checkbox" class="cart__checked"
+                                    onclick="checkAll(this)" />
+                                <span></span>
+                                <p class="cart__choose">Выбрать все</p>
+                            </label>
+                            <img class="arrow" src="./images/icon.svg">
+                        </div>
+                        <div class="container" id="cart">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="cart__grid card__grid-two">
+                    <div class="cart__about">
+                        <div class="cart__item" id="total">
+                        </div>
+
+                        <div class="cart__delivery">
+                            <div class="cart__delivery-info">
+                                <h5 class="cart__delivery-title">Доставка в пункт выдачи</h5>
+                                <img src="./images/pen.svg" alt="pen" class="cart__delivery-pen">
+                            </div>
+                            <p class="cart__delivery-adress">
+                                Бишкек, улица Ахматбека Суюмбаева, 12/1
+                            </p>
+                            <p class="cart__delivery-date">5–8 фев</p>
+                        </div>
+                    </div>
+
+                    <div class="cart__information">
+                        <img class="cart__information-img" src="./images/price-shipping.svg" alt="img">
+                        <p class="cart__cart__information-about">Обратная доставка товаров на склад при отказе — <span
+                                class="color">бесплатно</span></p>
+                    </div>
+
+                    <div class="cart__payment">
+                        <h4 class="cart__details-title">Оплата картой</h4>
+                        <div class="cart__payment-card">
+                            <img class="cart__payment-card_img" src="./images/mir.svg" alt="bank">
+                            <p class="cart__payment-card_num">1234 12•• •••• 1234</p>
+                        </div>
                         <label class="cart__label">
                             <input class="cart__checkbox" type="checkbox" class="cart__checked"
-                                onclick="checkAll(this)" />
+                                id="cart__checked-change" onclick="changeText()" checked />
                             <span></span>
-                            <p class="cart__choose">Выбрать все</p>
+                            <p class="cart__text">Списать оплату сразу</p>
                         </label>
-                        <img class="arrow" src="./images/icon.svg">
+                        <p class="cart__text cart__payment-info">
+                            Спишем оплату с карты при получении
+                        </p>
                     </div>
-                    <div class="container" id="cart">
+
+                    <button class="cart__payment-button" id="button__deliver">
+                        Заказать
+                    </button>
+                    <div class="cart__payment-agree">
+                        <img class="cart__payment-agree_img" src="./images/Frame277132151.svg" alt="img">
+                        <p class="cart__text cart__payment-agree_text">
+                            Соглашаюсь с правилами пользования торговой площадкой и возврата
+                        </p>
                     </div>
-                </form>
+                </div>
             </div>
 
-            <div class="cart__grid card__grid-two">
-                <div class="cart__about">
-                    <div class="cart__item" id="total">
-                    </div>
+            <div class="absent">
+                <div class="absent__details">
+                    <h3 class="absent__title">
+                        Отсутствуют · 3 товара
+                    </h3>
+                    <img class="arrow" src="./images/icon.svg">
+                </div>
+                <div class="absent__container" id="absent">
+                </div>
+            </div>
+        </section>
 
-                    <div class="cart__delivery">
-                        <div class="cart__delivery-info">
-                            <h5 class="cart__delivery-title">Доставка в пункт выдачи</h5>
-                            <img src="./images/pen.svg" alt="pen" class="cart__delivery-pen">
-                        </div>
-                        <p class="cart__delivery-adress">
+        <div class="payment">
+            <div class="payment__ditails">
+                <h3 class="payment__title">
+                    Способ доставки
+                </h3>
+                <button class="payment__button">
+                    Изменить
+                </button>
+            </div>
+
+            <div class="payment__grid">
+                <div class="payment__grid-item">
+                    <h5 class="payment__grid_title">
+                        Пункт выдачи
+                    </h5>
+                    <div class="payment__grid_information">
+                        <p class="payment__grid_info">
                             Бишкек, улица Ахматбека Суюмбаева, 12/1
                         </p>
-                        <p class="cart__delivery-date">5–8 фев</p>
+                        <span class="payment__grid_info payment__grid_info-deliver">
+                            <img class="payment__grid_img" src="./images/star_fill.svg" alt="star">
+                            <p class="payment__grid_rating">4.99</p>
+                            <p class="payment__grid_rating">Ежедневно с 10 до 21</p>
+                        </span>
                     </div>
                 </div>
-
-                <div class="cart__information">
-                    <img class="cart__information-img" src="./images/price-shipping.svg" alt="img">
-                    <p class="cart__cart__information-about">Обратная доставка товаров на склад при отказе — <span
-                            class="color">бесплатно</span></p>
+                <div class="payment__grid-item">
+                    <h5 class="payment__grid_title">
+                        Стоимость доставки
+                    </h5>
+                    <p class="payment__grid_info">Бесплатно</p>
                 </div>
-
-                <div class="cart__payment">
-                    <h4 class="cart__details-title">Оплата картой</h4>
-                    <div class="cart__payment-card">
-                        <img class="cart__payment-card_img" src="./images/mir.svg" alt="bank">
-                        <p class="cart__payment-card_num">1234 12•• •••• 1234</p>
-                    </div>
-                    <label class="cart__label">
-                        <input class="cart__checkbox" type="checkbox" class="cart__checked" id = "cart__checked-change" onclick="changeText()" checked/>
-                        <span></span>
-                        <p class="cart__text">Списать оплату сразу</p>
-                    </label>
-                    <p class="cart__text cart__payment-info">
-                        Спишем оплату с карты при получении
-                    </p>
+                <div class="payment__grid-item">
+                    <h5 class="payment__grid_title">
+                        5—6 февраля
+                    </h5>
+                    <p class="payment__grid_info"></p>
                 </div>
-
-                <button class="cart__payment-button" id="button__deliver">
-                    Заказать
-                </button>
-                <div class="cart__payment-agree">
-                    <img class="cart__payment-agree_img" src="./images/Frame277132151.svg" alt="img">
-                    <p class="cart__text cart__payment-agree_text">
-                        Соглашаюсь с правилами пользования торговой площадкой и возврата
-                    </p>
+                <div class="payment__grid-item">
+                    <h5 class="payment__grid_title">
+                        7—8 февраля
+                    </h5>
+                    <p class="payment__grid_info"></p>
                 </div>
-
+            </div>
+            <div class="payment__information">
+                <img class="payment__information-img" src="./images/ok.svg">
+                <p class="payment__information-text">
+                    Обратная доставка товаров на склад при отказе — <abbr class="color"
+                        data-title="Если товары вам не подойдут, мы вернем их обратно на склад - это бесплатно">бесплатно</abbr>
+                </p>
             </div>
         </div>
-    </section>
+    </main>
 
     <script src="./src/utils.js"></script>
     <script src="./index.js"></script>
     <script src="./src/cart.js"></script>
     <script src="./src/total.js"></script>
+    <script src="./src/absent.js"></script>
 
 </body>
 

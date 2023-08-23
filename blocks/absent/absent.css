@@ -1,0 +1,129 @@
+:root {
+    --primary-background: #F6F6FA;
+    --purple-background: #6725A8;
+    --white-text: #FFF;
+    --active-button: #CB11AB;
+    --color-grey: #A0A0A4;
+    --color-red: #FF3B30;
+    --price-sale: #A0A0A4;
+    --color-green: #0CB477;
+}
+
+.absent {
+    margin: 0;
+    padding: 0;
+    margin-left: 24px;
+    width: 891px;
+}
+
+.absent__details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.absent__title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 16px;
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.arrow {
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.absent__container {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 56px;
+}
+
+.absent__card {
+    display: flex;
+    flex-direction: column;
+}
+
+.absent__card-container {
+    display: flex;
+    margin-bottom: 32px;
+}
+
+.absent__card-container:last-child {
+    margin-bottom: 0;
+}
+
+.absent__image {
+    margin: 0;
+    padding: 0;
+    width: 72px;
+    height: 96px;
+    margin-right: 16px;
+}
+
+.absent__info {
+    margin: 0;
+    padding: 0;
+    width: 309px;
+}
+
+.absent__name {
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 8px;
+    color: var(--color-grey);
+}
+
+.absent__items {
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--color-grey);
+}
+
+.adsent__button {
+    margin: 0;
+    padding: 0;
+    margin-left: 202px;
+    width: 100px;
+    text-align: end;
+}
+
+.absent__like {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    margin-right: 16px;
+    background-image: url(../../images/like.svg);
+    background-color: var(--primary-background);
+    cursor: pointer;
+}
+
+.absent__delete {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-image: url(../../images/del.svg);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-background);
+}

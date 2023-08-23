@@ -45,9 +45,7 @@ const generateCart = () => {
 			</p>
 			<div class="card__counter-buttons">
 				<button class="card__counter-like" id="like" onclick="changeColor()"></button>
-				<button class="card__counter-delete">
-					<img id = "delete" class="icons" src="./images/del.svg" alt="icon">
-				</button>
+				<button class="card__counter-delete"></button>
 			</div>
 		</div>
 	
