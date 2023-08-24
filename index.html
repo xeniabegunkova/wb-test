@@ -56,14 +56,15 @@
                 <div class="cart__grid">
                     <h4 class="cart__title">Корзина</h4>
                     <form class="cart__items">
-                        <div class="cart__input">
-                            <label class="cart__label">
+                        <div class="cart__input" id="item">
+                            <label class="cart__label" id="label">
                                 <input class="cart__checkbox" type="checkbox" class="cart__checked"
                                     onclick="checkAll(this)" />
                                 <span></span>
                                 <p class="cart__choose">Выбрать все</p>
                             </label>
-                            <img class="arrow" src="./images/icon.svg">
+                            <button class="arrow__button" id="btn">
+                            </button>
                         </div>
                         <div class="container" id="cart">
                         </div>
@@ -74,7 +75,8 @@
                             <h3 class="absent__title">
                                 Отсутствуют · 3 товара
                             </h3>
-                            <img class="arrow" src="./images/icon.svg">
+                            <button class="arrow__button" id="btn-hide">
+                            </button>
                         </div>
                         <div class="absent__container" id="absent">
                         </div>
@@ -240,8 +242,9 @@
     </footer>
 
     <script src="./src/utils.js"></script>
-    <script src="./index.js"></script>
     <script src="./src/cart.js"></script>
+    <script src="./index.js"></script>
+    
     <script src="./src/total.js"></script>
     <script src="./src/absent.js"></script>
     <script src="./src/payment.js"></script>

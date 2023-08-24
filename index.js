@@ -13,7 +13,15 @@ const input = document.getElementById('cart__checked-change');
 
 const buttonDeliver = document.getElementById('button__deliver');
 
+
+const btn = document.getElementById('btn');
+const btnHide = document.getElementById('btn-hide');
+const cartContainer = document.getElementById('cart');
+const absentContainer = document.getElementById('absent');
+
+const label = document.getElementById('label');
 //burger menu
+
 
 menuBtn.addEventListener('click', function () {
 	menuBtn.classList.toggle('active');
@@ -39,7 +47,16 @@ function checkAll(obj) {
 }
 
 
+btn.addEventListener('click', () => {
+	cartContainer.classList.toggle('hidden');
+	btn.classList.toggle('hide');
+	label.classList.toggle('hidden');
+});
 
+btnHide.addEventListener('click', () => {
+	absentContainer.classList.toggle('hidden');
+	btnHide.classList.toggle('hide');
+});
 
 
 

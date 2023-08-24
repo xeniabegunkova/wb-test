@@ -211,7 +211,7 @@
     width: 20px;
     height: 20px;
     cursor: pointer;
-    position:relative;
+    position: relative;
 }
 
 .card__counter-like:hover {
@@ -229,7 +229,7 @@
     width: 20px;
     height: 20px;
     cursor: pointer;
-    position:relative;
+    position: relative;
 }
 
 .card__counter-delete:hover {
@@ -312,4 +312,23 @@ label span {
 
 .cart__label {
     display: flex;
+}
+
+.arrow__button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    background-image: url(../../images/icon.svg);
+    background-repeat: no-repeat;
+}
+
+.hidden {
+    display: none;
+}
+
+.hide {
+    background-image: url(../../images/arrow-hide.svg);
 }
