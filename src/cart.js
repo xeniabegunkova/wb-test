@@ -44,8 +44,8 @@ const generateCart = () => {
 				${left}
 			</p>
 			<div class="card__counter-buttons">
-				<button class="card__counter-like" id="like" onclick="changeColor()"></button>
-				<button class="card__counter-delete"></button>
+				<button class="card__counter-like" aria-label="Нравится" id="like" onclick="changeColor()"></button>
+				<button class="card__counter-delete" aria-label="Удалить"></button>
 			</div>
 		</div>
 	
@@ -109,6 +109,8 @@ const update = (id) => {
 	calculation();
 	TotalAmount();
 	changeText();
+	hide();
+	generatePay();
 }
 
 const calculation = () => {

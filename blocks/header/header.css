@@ -205,7 +205,6 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .header__amount {
-    width: 12px;
     height: 16px;
     position: absolute;
     top: -5px;

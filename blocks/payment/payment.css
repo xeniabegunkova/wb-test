@@ -7,6 +7,7 @@
     --color-red: #FF3B30;
     --price-sale: #A0A0A4;
     --color-green: #0CB477;
+    --color-orange: #F55123;
 }
 
 .payment {
@@ -119,6 +120,7 @@
 .payment__grid_info {
     margin: 0;
     padding: 0;
+    position: relative;
     font-family: Segoe UI;
     font-size: 16px;
     font-style: normal;
@@ -154,4 +156,42 @@
     margin: 0;
     padding: 0;
     margin-left: 8px;
+}
+
+.payment__grid_img {
+    width: 40px;
+    height: 56px;
+    margin-right: 16px;
+}
+
+.payment__grid_img:last-child {
+    margin-right: 0;
+}
+
+.payment__grid_img-star {
+    width: 12px;
+    height: 12px;
+}
+
+.payment__grid__amount {
+    position: absolute;
+    width: 12px;
+    height: 16px;
+    top: -12px;
+    left: 32px;
+    border-radius: 16px;
+    transform: rotate(0.065deg);
+    padding: 1px 4px 0px 4px;
+    background-color: var(--color-orange);
+    color: var(--white-text);
+    text-align: center;
+    font-family: Segoe UI;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+.payment__info {
+    display: flex;
 }

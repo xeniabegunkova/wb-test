@@ -42,7 +42,7 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-
+    gap: 32px;
 }
 
 .cart__items {

@@ -68,6 +68,56 @@
                         <div class="container" id="cart">
                         </div>
                     </form>
+
+                    <div class="absent">
+                        <div class="absent__details">
+                            <h3 class="absent__title">
+                                Отсутствуют · 3 товара
+                            </h3>
+                            <img class="arrow" src="./images/icon.svg">
+                        </div>
+                        <div class="absent__container" id="absent">
+                        </div>
+                    </div>
+                    <div class="payment">
+                        <div class="payment__ditails">
+                            <h3 class="payment__title">
+                                Способ доставки
+                            </h3>
+                            <button class="payment__button">
+                                Изменить
+                            </button>
+                        </div>
+            
+                        <div class="payment__grid">
+                            <div class="payment__grid-item">
+                                <h5 class="payment__grid_title">
+                                    Пункт выдачи
+                                </h5>
+                                <div class="payment__grid_information">
+                                    <p class="payment__grid_info">
+                                        Бишкек, улица Ахматбека Суюмбаева, 12/1
+                                    </p>
+                                    <span class="payment__grid_info payment__grid_info-deliver">
+                                        <img class="payment__grid_img-star" src="./images/star_fill.svg" alt="star">
+                                        <p class="payment__grid_rating">4.99</p>
+                                        <p class="payment__grid_rating">Ежедневно с 10 до 21</p>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="payment__grid-items" id="payment">
+            
+                            </div>
+                        </div>
+                        <div class="payment__information">
+                            <img class="payment__information-img" src="./images/ok.svg">
+                            <p class="payment__information-text">
+                                Обратная доставка товаров на склад при отказе — <abbr class="color"
+                                    data-title="Если товары вам не подойдут, мы вернем их обратно на склад - это бесплатно">бесплатно</abbr>
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
 
                 <div class="cart__grid card__grid-two">
@@ -90,7 +140,9 @@
                     <div class="cart__information">
                         <img class="cart__information-img" src="./images/price-shipping.svg" alt="img">
                         <p class="cart__cart__information-about">Обратная доставка товаров на склад при отказе — <span
-                                class="color">бесплатно</span></p>
+                                class="color"
+                                data-title="Если товары вам не подойдут, мы вернем их обратно на склад - это бесплатно">бесплатно</span>
+                        </p>
                     </div>
 
                     <div class="cart__payment">
@@ -122,71 +174,9 @@
                 </div>
             </div>
 
-            <div class="absent">
-                <div class="absent__details">
-                    <h3 class="absent__title">
-                        Отсутствуют · 3 товара
-                    </h3>
-                    <img class="arrow" src="./images/icon.svg">
-                </div>
-                <div class="absent__container" id="absent">
-                </div>
-            </div>
         </section>
 
-        <div class="payment">
-            <div class="payment__ditails">
-                <h3 class="payment__title">
-                    Способ доставки
-                </h3>
-                <button class="payment__button">
-                    Изменить
-                </button>
-            </div>
-
-            <div class="payment__grid">
-                <div class="payment__grid-item">
-                    <h5 class="payment__grid_title">
-                        Пункт выдачи
-                    </h5>
-                    <div class="payment__grid_information">
-                        <p class="payment__grid_info">
-                            Бишкек, улица Ахматбека Суюмбаева, 12/1
-                        </p>
-                        <span class="payment__grid_info payment__grid_info-deliver">
-                            <img class="payment__grid_img" src="./images/star_fill.svg" alt="star">
-                            <p class="payment__grid_rating">4.99</p>
-                            <p class="payment__grid_rating">Ежедневно с 10 до 21</p>
-                        </span>
-                    </div>
-                </div>
-                <div class="payment__grid-item">
-                    <h5 class="payment__grid_title">
-                        Стоимость доставки
-                    </h5>
-                    <p class="payment__grid_info">Бесплатно</p>
-                </div>
-                <div class="payment__grid-item">
-                    <h5 class="payment__grid_title">
-                        5—6 февраля
-                    </h5>
-                    <p class="payment__grid_info"></p>
-                </div>
-                <div class="payment__grid-item">
-                    <h5 class="payment__grid_title">
-                        7—8 февраля
-                    </h5>
-                    <p class="payment__grid_info"></p>
-                </div>
-            </div>
-            <div class="payment__information">
-                <img class="payment__information-img" src="./images/ok.svg">
-                <p class="payment__information-text">
-                    Обратная доставка товаров на склад при отказе — <abbr class="color"
-                        data-title="Если товары вам не подойдут, мы вернем их обратно на склад - это бесплатно">бесплатно</abbr>
-                </p>
-            </div>
-        </div>
+       
     </main>
 
     <script src="./src/utils.js"></script>
@@ -194,6 +184,7 @@
     <script src="./src/cart.js"></script>
     <script src="./src/total.js"></script>
     <script src="./src/absent.js"></script>
+    <script src="./src/payment.js"></script>
 
 </body>
 
