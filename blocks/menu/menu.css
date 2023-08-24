@@ -1,0 +1,17 @@
+:root {
+    --primary-background: #F6F6FA;
+    --purple-background: #6725A8;
+    --white-text: #FFF;
+    --active-button: #CB11AB;
+    --color-grey: #A0A0A4;
+    --color-red: #FF3B30;
+    --price-sale: #A0A0A4;
+    --color-green: #0CB477;
+    --color-orange: #F55123;
+}
+
+
+.main {
+    background-color: var(--primary-background);
+    border-radius: 24px 24px 0px 0px;
+}

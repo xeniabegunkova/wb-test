@@ -1,0 +1,111 @@
+:root {
+    --color-grey: #A0A0A4;
+    --white-text: #FFF;
+}
+
+.recipient {
+    margin-bottom: 50px;
+}
+
+.recipient-details {
+    margin: 0;
+    padding: 0;
+    width: 700px;
+}
+
+.recipient-details__form {
+    display: flex;
+}
+
+.input-container {
+    position: relative;
+}
+
+.recipient-details {
+    display: flex;
+    width: 891px;
+    flex-direction: column;
+}
+
+.form {
+    display: flex;
+}
+
+.ic1 {
+    margin-top: 34px;
+}
+
+.input-container__second {
+    margin-top: 30px;
+}
+
+.input {
+    border: 0;
+    border-bottom: 1px solid var(--color-grey);
+    color: black;
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    height: 24px;
+    outline: 0;
+    width: 338px;
+    margin-right: 24px;
+}
+
+.input-second {
+    width: 217px;
+}
+
+.cut {
+    background-color: var(--white-text);
+    border-radius: 10px;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    top: -20px;
+    transform: translateY(0);
+    transition: transform 200ms;
+    width: 76px;
+}
+
+.input:focus~.cut,
+.input:not(:placeholder-shown)~.cut {
+    transform: translateY(8px);
+}
+
+.placeholder {
+    color: #65657b;
+    left: 0;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 10px;
+}
+
+.input:focus~.placeholder,
+.input:not(:placeholder-shown)~.placeholder {
+    transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+.input:not(:placeholder-shown)~.placeholder {
+    color: #808097;
+}
+
+.input:focus~.placeholder {
+    color: var(--color-grey);
+}
+
+.recipient-details__label {
+    text-align: end;
+    width: 660px;
+    margin-bottom: 4px;
+    font-family: Segoe UI;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+}

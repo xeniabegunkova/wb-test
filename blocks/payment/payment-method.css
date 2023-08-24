@@ -1,0 +1,19 @@
+:root {
+    --color-grey: #A0A0A4;
+}
+
+.payment-method {
+    margin-top: 16px;
+}
+
+.payment-method__card_text {
+    margin: 0;
+    padding: 0;
+    margin-top: 8px;
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--color-grey);
+}

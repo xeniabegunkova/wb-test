@@ -50,7 +50,7 @@
         </div>
     </header>
 
-    <main>
+    <main class="main">
         <section class="cart">
             <div class="cart__container">
                 <div class="cart__grid">
@@ -88,7 +88,7 @@
                                 Изменить
                             </button>
                         </div>
-            
+
                         <div class="payment__grid">
                             <div class="payment__grid-item">
                                 <h5 class="payment__grid_title">
@@ -106,7 +106,7 @@
                                 </div>
                             </div>
                             <div class="payment__grid-items" id="payment">
-            
+
                             </div>
                         </div>
                         <div class="payment__information">
@@ -118,6 +118,62 @@
                         </div>
                     </div>
 
+                    <div class="payment-method payment">
+                        <div class="payment-method-item payment__ditails">
+                            <h4 class="payment__title">
+                                Способ доставки
+                            </h4>
+                            <button class="payment__button">
+                                Изменить
+                            </button>
+                        </div>
+                        <p class="payment-method__card">
+
+                        </p>
+                        <span class="payment-method__card_text">
+                            Спишем оплату с карты при получении
+                        </span>
+                    </div>
+
+                    <div class="recipient payment">
+                        <h4 class="payment__title">
+                            Получатель
+                        </h4>
+
+                        <div class="recipient-details">
+                            <form class="form">
+                                <div class="input-container ic1">
+                                    <input id="firstname" class="input" type="text" placeholder=" " />
+                                    <div class="cut"></div>
+                                    <label for="firstname" class="placeholder">Имя</label>
+                                </div>
+                                <div class="input-container ic1">
+                                    <input id="lastname" class="input" type="text" placeholder=" " />
+                                    <div class="cut"></div>
+                                    <label for="lastname" class="placeholder">Фамилия</label>
+                                </div>
+                            </form>
+
+                            <form class="form ic2">
+                                <div class="input-container input-container__second">
+                                    <input id="email" class="input input-second" type="email" placeholder=" " />
+                                    <div class="cut"></div>
+                                    <label for="email" class="placeholder">Email</label>
+                                </div>
+                                <div class="input-container input-container__second">
+                                    <input id="tel" class="input input-second" type="tel" placeholder=" " />
+                                    <div class="cut"></div>
+                                    <label for="tel" class="placeholder">Телефон</label>
+                                </div>
+                                <div class="input-container input-container__second">
+                                    <input id="inn" class="input input-second" type="text" placeholder=" " />
+                                    <div class="cut"></div>
+                                    <label for="inn" class="placeholder">ИНН</label>
+                                </div>
+                            </form>
+                            <span class="recipient-details__label">Для таможенного оформления</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="cart__grid card__grid-two">
@@ -174,10 +230,14 @@
                 </div>
             </div>
 
-        </section>
+            <div class="line"></div>
 
-       
+        </section>
     </main>
+
+    <footer class="footer">
+        <p class="footer__text">© 2022 ООО «Товары и точка»</p>
+    </footer>
 
     <script src="./src/utils.js"></script>
     <script src="./index.js"></script>

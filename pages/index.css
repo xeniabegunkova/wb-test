@@ -13,3 +13,11 @@
 @import url(../blocks/absent/absent.css);
 
 @import url(../blocks/payment/payment.css);
+
+@import url(../blocks/payment/payment-method.css);
+
+@import url(../blocks/recipient/recipient.css);
+
+@import url(../blocks/footer/footer.css);
+
+@import url(../blocks/menu/menu.css);

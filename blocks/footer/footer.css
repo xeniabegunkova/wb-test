@@ -1,0 +1,41 @@
+:root {
+    --primary-background: #F6F6FA;
+    --purple-background: #6725A8;
+    --white-text: #FFF;
+    --active-button: #CB11AB;
+    --color-grey: #A0A0A4;
+    --color-red: #FF3B30;
+    --price-sale: #A0A0A4;
+    --color-green: #0CB477;
+    --color-orange: #F55123;
+}
+
+
+.footer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    background-color: var(--purple-background);
+   
+}
+
+.footer__text {
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--white-text);
+    padding: 48px 0 24px;
+}
+
+
+.line {
+    background-color: var(--primary-background);
+    width: 1400px;
+    height: 24px;
+    border-radius: 0 0 24px 24px;
+    margin-bottom: -24px;
+    z-index: 100;
+    position: absolute;
+}
