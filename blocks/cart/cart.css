@@ -197,6 +197,7 @@
     display: flex;
     position: absolute;
     right: 0;
+    border: 1px;
 }
 
 .card__counter-like {
@@ -210,6 +211,12 @@
     width: 20px;
     height: 20px;
     cursor: pointer;
+    position:relative;
+}
+
+.card__counter-like:hover {
+    background-image: url(../../images/like-pink.svg);
+    top: 2.5px;
 }
 
 .card__counter-delete {
@@ -218,8 +225,18 @@
     border: none;
     background-color: var(--primary-background);
     background-image: url(../../images/del.svg);
+    background-repeat: no-repeat;
     width: 20px;
     height: 20px;
+    cursor: pointer;
+    position:relative;
+}
+
+.card__counter-delete:hover {
+    background-image: url(../../images/delete-red.svg);
+    top: 2.5px;
+    right: 0;
+    left: 2px;
 }
 
 .card__counter-like.active {

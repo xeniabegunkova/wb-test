@@ -17,8 +17,8 @@ const generateAbsent = () => {
                 </div>
 			</div>
             <div class="adsent__button" id="button">
-            <button class="absent__like"></button>
-            <button class="absent__delete"></button>
+            <button class="card__counter-like absent__like"></button>
+            <button class="card__counter-delete absent__delete"></button>
             </div>
             </div>
         `

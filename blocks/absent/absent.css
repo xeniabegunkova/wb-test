@@ -99,7 +99,7 @@
 .adsent__button {
     margin: 0;
     padding: 0;
-    margin-left: 202px;
+    margin-left: 182px;
     width: 100px;
     text-align: end;
 }
@@ -111,7 +111,7 @@
     background-repeat: no-repeat;
     width: 20px;
     height: 20px;
-    margin-right: 16px;
+    margin-right: 14px;
     background-image: url(../../images/like.svg);
     background-color: var(--primary-background);
     cursor: pointer;
