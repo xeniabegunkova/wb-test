@@ -109,8 +109,6 @@ const update = (id) => {
 	calculation();
 	TotalAmount();
 	changeText();
-	hide();
-	generatePay();
 }
 
 const calculation = () => {
@@ -119,4 +117,5 @@ const calculation = () => {
 }
 
 calculation(); //everytime update calculation is work
+
 
