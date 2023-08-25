@@ -47,10 +47,10 @@ function checkAll(obj) {
 }
 
 
-btn.addEventListener('click', () => {
+btn.addEventListener('click', (e) => {
+	e.preventDefault();
 	cartContainer.classList.toggle('hidden');
 	btn.classList.toggle('hide');
-	label.classList.toggle('hidden');
 });
 
 btnHide.addEventListener('click', () => {

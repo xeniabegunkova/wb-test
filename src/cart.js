@@ -30,17 +30,16 @@ const generateCart = () => {
 	
 		<div class="card__counter">
 			<div class="counter">
-				<div class="counter__button counter__button_min">
-					<img onclick="decrement(${id})" class="counter__image" src="./images/−.svg" alt="minus">
+			<div onclick="decrement(${id})" class="counter__button counter__button_min ${search.item === 1 ? "counter__button_min-grey" : ""}" id="min">
 				</div>
 				<div id=${id} class="counter__input">
 					${search.item === undefined ? 0 : search.item}
 				</div>
-				<div class="counter__button counter__button_plus">
-					<img onclick="increment(${id})" class="counter__image" src="./images/+.svg" alt="plus">
+				<div onclick="increment(${id})" class="counter__button counter__button_plus">
+
 				</div>
 			</div>
-			<p class="card__counter-text">
+			<p  class="card__counter-text">
 				${left}
 			</p>
 			<div class="card__counter-buttons">
@@ -60,22 +59,41 @@ const generateCart = () => {
 }
 
 generateCart();
-const like = document.getElementById('like');
 
-function changeColor() {
+function initFav() {
+	let items = document.getElementsByClassName('card__counter-like');
+	console.log(items)
+	for (var x = 0; x < items.length; x++) {
+		let item = items[x];
+		console.log(item)
+		item.addEventListener('click', function (e) {
+			console.log('click')
+			e.preventDefault();
+			e.target.classList.toggle('active');
+		});
+	}
 }
 
+initFav();
 
 const increment = (id) => {
 	const selectedItem = id;
 	const search = basket.find((x) => x.id === selectedItem.id); //check all objects one by one
+	const searchTwo = cartItemsData.find((x) => x.id === selectedItem.id);
+	console.log(searchTwo)
 
 	if (search === undefined) {
 		basket.push({
 			id: selectedItem.id,
 			item: 1,
+			left: '',
 		});
-	} else {
+	} else if (searchTwo.left !== '') {
+		while (search.item < 2) {
+			search.item += 1;
+		}
+	}
+	else {
 		search.item += 1;
 	}
 
@@ -90,7 +108,7 @@ const decrement = (id) => {
 
 	if (search === undefined) {
 		return
-	} else if (search.item === 0) {
+	} else if (search.item === 1) {
 		return
 	} else {
 		search.item -= 1;
@@ -109,6 +127,7 @@ const update = (id) => {
 	calculation();
 	TotalAmount();
 	changeText();
+	generateCart();
 }
 
 const calculation = () => {

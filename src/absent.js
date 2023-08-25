@@ -17,7 +17,7 @@ const generateAbsent = () => {
                 </div>
 			</div>
             <div class="adsent__button" id="button">
-            <button class="card__counter-like absent__like"></button>
+            <button class="card__counter-like absent__like" aria-label="Нравится"></button>
             <button class="card__counter-delete absent__delete"></button>
             </div>
             </div>
@@ -27,3 +27,19 @@ const generateAbsent = () => {
 }
 
 generateAbsent();
+
+function initFav() {
+	let items = document.getElementsByClassName('absent__like');
+	console.log(items)
+	for (var x = 0; x < items.length; x++) {
+		let item = items[x];
+		console.log(item)
+		item.addEventListener('click', function (e) {
+			console.log('click')
+			e.preventDefault();
+			e.target.classList.toggle('active');
+		});
+	}
+}
+
+initFav();

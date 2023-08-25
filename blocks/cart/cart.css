@@ -154,19 +154,44 @@
     height: 44px;
 }
 
-.counter__image {
+.counter__button {}
+
+.counter__button_min {
     margin: 0;
     padding: 0;
-    width: 9px;
+    margin: 28px 0 16px 12px;
+    background-image: url(../../images/−.svg);
+    background-repeat: no-repeat;
+    width: 13px;
     height: 16px;
     cursor: pointer;
 }
 
-.counter__button_min {
-    margin-left: 8px;
+.counter__button_min-grey {
+    background-image: url(../../images/min-grey.svg);
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 16px;
+    margin: 28px 0 16px 12px;
 }
 
 .counter__button_plus {
+    margin-right: 8px;
+    background-image: url(../../images/+.svg);
+    background-repeat: no-repeat;
+    margin: 14px 12px 6px 0;
+    width: 13px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.counter__button_plus.grey-button {
+    background-image: url(../../images/plus-grey.svg);
+    background-repeat: no-repeat;
+    margin: 14px 12px 6px 0;
+    width: 13px;
+    height: 16px;
+    cursor: pointer;
     margin-right: 8px;
 }
 
@@ -218,6 +243,13 @@
     background-image: url(../../images/like-pink.svg);
     top: 2.5px;
 }
+
+.card__counter-like.active {
+    background-image: url(../../images/like-pink.svg);
+    top: 2.5px;
+}
+
+
 
 .card__counter-delete {
     margin: 0;

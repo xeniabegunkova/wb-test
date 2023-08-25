@@ -10,7 +10,6 @@ const cartItemsData = [{
 	price: '522',
 	sale: '1051',
 	left: 'Осталось 2 шт.',
-	like: '',
 },
 {
 	id: 'fkfkfkkff',
@@ -24,7 +23,6 @@ const cartItemsData = [{
 	price: '2100047',
 	sale: '2300047',
 	left: '',
-	like: '',
 },
 {
 	id: 'rprprprprp',
@@ -38,5 +36,4 @@ const cartItemsData = [{
 	price: '494',
 	sale: '950',
 	left: 'Осталось 2 шт.',
-	like: '',
 }]
