@@ -210,8 +210,8 @@
 .card__counter-text {
     margin: 0;
     padding: 0;
+    display: flex;
     margin-top: 8px;
-    margin-bottom: 8px;
     font-family: Segoe UI;
     font-size: 13px;
     font-style: normal;
@@ -225,6 +225,7 @@
     position: absolute;
     right: 0;
     border: 1px;
+    margin-top: 8px;
 }
 
 .card__counter-like {

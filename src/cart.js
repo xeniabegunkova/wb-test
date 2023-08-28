@@ -45,8 +45,8 @@ const generateCart = () => {
 				id="plus">
 				</button>
 			</div>
-			<p  class="card__counter-text">
-				Осталось ${numOfAvailableItems} шт.
+			<p  class="card__counter-text ${searchItem?.left >= 25 ? "hidden" : ""}" id="textLeft">
+				${searchItem?.left === 0 ? "Товара не осталось" : `Осталось ${numOfAvailableItems} шт.`}
 			</p>
 			<div class="card__counter-buttons">
 				<button class="card__counter-like" aria-label="Нравится" id="like"></button>
@@ -89,7 +89,8 @@ const increment = (selectedItem) => {
 	const item = basket.find((x) => x.id === selectedItem.id); //check all objects one by one
 	const currentCount = Number(selectedItem.innerHTML);
 	let buttonPlus = document.getElementById('plus');
-	console.log(buttonPlus)
+	let textLeft = document.getElementById('textLeft');
+	console.log(textLeft)
 
 	if (!item) {
 		basket.push({
