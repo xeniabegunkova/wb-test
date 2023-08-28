@@ -30,10 +30,8 @@ generateAbsent();
 
 function initFav() {
 	let items = document.getElementsByClassName('absent__like');
-	console.log(items)
 	for (var x = 0; x < items.length; x++) {
 		let item = items[x];
-		console.log(item)
 		item.addEventListener('click', function (e) {
 			console.log('click')
 			e.preventDefault();

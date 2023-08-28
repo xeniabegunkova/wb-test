@@ -2,9 +2,12 @@ const cart = document.getElementById('cart');
 let basket = JSON.parse(localStorage.getItem('data')) || [];
 
 const generateCart = () => {
-	return (cart.innerHTML = cartItemsData.map((x) => {
-		let { id, img, name, color, size, stock, company, price, sale, left } = x;
-		let search = basket.find((x) => x.id === id) || [];
+	cart.innerHTML = cartItemsData.map((cardItem) => {
+		let { id, img, name, color, size, stock, company, price, sale, left } = cardItem;
+		let searchItem = basket.find((cardItem) => cardItem.id === id);
+
+		const numOfAvailableItems = searchItem ? searchItem.left : left;
+
 		return `
 		<div id=product-id-${id} class="card">
 		<p class="card__input">
@@ -30,20 +33,23 @@ const generateCart = () => {
 	
 		<div class="card__counter">
 			<div class="counter">
-			<div onclick="decrement(${id})" class="counter__button counter__button_min ${search.item === 1 ? "counter__button_min-grey" : ""}" id="min">
-				</div>
+			<button onclick="decrement(${id})" 
+			class="counter__button counter__button_min ${searchItem?.item === 1 ? "counter__button_min-grey" : ""}" 
+			id="min" >
+				</button>
 				<div id=${id} class="counter__input">
-					${search.item === undefined ? 0 : search.item}
+					${searchItem?.item === undefined ? 1 : searchItem?.item}
 				</div>
-				<div onclick="increment(${id})" class="counter__button counter__button_plus">
-
-				</div>
+				<button onclick="increment(${id})" 
+				class="counter__button counter__button_plus ${searchItem?.left === 0 || cardItem.left === 0 ? "grey-button" : ""}"
+				id="plus">
+				</button>
 			</div>
 			<p  class="card__counter-text">
-				${left}
+				Осталось ${numOfAvailableItems} шт.
 			</p>
 			<div class="card__counter-buttons">
-				<button class="card__counter-like" aria-label="Нравится" id="like" onclick="changeColor()"></button>
+				<button class="card__counter-like" aria-label="Нравится" id="like"></button>
 				<button class="card__counter-delete" aria-label="Удалить"></button>
 			</div>
 		</div>
@@ -55,17 +61,15 @@ const generateCart = () => {
 	</div>
 		`
 	})
-		.join(""))
+		.join("")
 }
 
 generateCart();
 
 function initFav() {
 	let items = document.getElementsByClassName('card__counter-like');
-	console.log(items)
-	for (var x = 0; x < items.length; x++) {
+	for (let x = 0; x < items.length; x++) {
 		let item = items[x];
-		console.log(item)
 		item.addEventListener('click', function (e) {
 			console.log('click')
 			e.preventDefault();
@@ -76,25 +80,33 @@ function initFav() {
 
 initFav();
 
-const increment = (id) => {
-	const selectedItem = id;
-	const search = basket.find((x) => x.id === selectedItem.id); //check all objects one by one
-	const searchTwo = cartItemsData.find((x) => x.id === selectedItem.id);
-	console.log(searchTwo)
 
-	if (search === undefined) {
+const findItem = (id) => {
+	return cartItemsData.find((cardItem) => cardItem.id === id)
+}
+
+const increment = (selectedItem) => {
+	const item = basket.find((x) => x.id === selectedItem.id); //check all objects one by one
+	const currentCount = Number(selectedItem.innerHTML);
+	let buttonPlus = document.getElementById('plus');
+	console.log(buttonPlus)
+
+	if (!item) {
 		basket.push({
 			id: selectedItem.id,
-			item: 1,
-			left: '',
+			item: currentCount + 1,
+			left: findItem(selectedItem.id).left - 1,
 		});
-	} else if (searchTwo.left !== '') {
-		while (search.item < 2) {
-			search.item += 1;
+	} else {
+		if (item.left === 0) {
+			buttonPlus.setAttribute('disabled', '');
+			return;
 		}
-	}
-	else {
-		search.item += 1;
+		const selectedItemIndex = basket.findIndex(el => el.id === selectedItem.id);
+		console.log(selectedItemIndex)
+		const updetedItem = { ...item, item: currentCount + 1, left: item.left - 1 };
+		console.log(item)
+		basket[selectedItemIndex] = updetedItem;
 	}
 
 	update(selectedItem.id);
@@ -102,28 +114,39 @@ const increment = (id) => {
 	localStorage.setItem('data', JSON.stringify(basket));
 }
 
-const decrement = (id) => {
-	const selectedItem = id;
-	const search = basket.find((x) => x.id === selectedItem.id); //check all objects one by one
+const decrement = (selectedItem) => {
+	let buttonMin = document.getElementById('min');
 
-	if (search === undefined) {
-		return
-	} else if (search.item === 1) {
-		return
+	const item = basket.find((x) => x.id === selectedItem.id); //check all objects one by one
+	const currentCount = Number(selectedItem.innerHTML);
+
+	if (!item) {
+		basket.push({
+			id: selectedItem.id,
+			item: currentCount - 1,
+			left: findItem(selectedItem.id).left + 1,
+		});
 	} else {
-		search.item -= 1;
+		if (item.item === 1) {
+			buttonMin.setAttribute('disabled', '');
+			return;
+		}
+		const selectedItemIndex = basket.findIndex(el => el.id === selectedItem.id);
+		console.log(selectedItemIndex)
+		const updetedItem = { ...item, item: currentCount - 1, left: item.left + 1 };
+		console.log(item)
+		basket[selectedItemIndex] = updetedItem;
 	}
 
 	update(selectedItem.id);
 
-	basket = basket.filter((x) => x.item !== 0); //remove items from localstore if they are zero 
-
 	localStorage.setItem('data', JSON.stringify(basket));
+
 }
 
 const update = (id) => {
-	const search = basket.find((x) => x.id === id);
-	document.getElementById(id).innerHTML = search.item;
+	const item = basket.find((x) => x.id === id);
+	document.getElementById(id).innerHTML = item.item;
 	calculation();
 	TotalAmount();
 	changeText();
