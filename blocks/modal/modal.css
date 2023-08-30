@@ -1,0 +1,185 @@
+:root {
+    --white-text: #FFF;
+    --active-button: #CB11AB;
+}
+
+.popup {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .3s, opacity .2s ease;
+    z-index: 10;
+}
+
+.popup__content {
+    padding: 16px 24px 24px;
+    width: 400px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    position: relative;
+}
+
+.popup__info {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.popup__close {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    background-image: url(../../images/search-close.svg);
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.popup__title {
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+    margin-bottom: 22px;
+}
+
+.popup__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.popup__form-img {
+    width: 32px;
+    height: 24px;
+    gap: 8px;
+    margin-right: 5px;
+    margin-left: 9px;
+}
+
+.popup__button {
+    background-color: var(--active-button);
+    color: var(--white-text);
+    height: 44px;
+    padding: 0px 48px 5px 48px;
+    border-radius: 8px;
+    border: none;
+    width: 164px;
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.popup_is-open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup__form-name {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+}
+
+.popup__label {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.buttons {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 26px;
+}
+
+.button__popup {
+    padding: 9px;
+    border-radius: 20px;
+    border: 2px solid #CB11AB;
+    background-color: transparent;
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    width: 224px;
+    cursor: pointer;
+}
+
+.button__popup:hover {
+    border: 2px solid rgba(203, 17, 171, 0.15);
+}
+
+.adress__form {
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+.popup__form-input {
+    margin-right: 8px;
+}
+
+.adress-delete {
+    margin-left: 8px;
+    position: absolute;
+    right: 0;
+}
+
+.adress-delete:hover {
+    margin-left: 8px;
+    position: absolute;
+    right: 0;
+    left: auto;
+    top: auto;
+}
+
+.adress-label {
+    font-size: 14px;
+    align-items: center;
+    position: relative;
+}
+
+.active-button {
+    border: 2px solid rgba(203, 17, 171, 0.15);
+}

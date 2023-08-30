@@ -195,3 +195,59 @@
 .payment__info {
     display: flex;
 }
+
+@media screen and (max-width: 900px) {
+    .payment {
+        width: 42em;
+    }
+
+    .cart__payment-card-flex {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .payment {
+        width: 90%;
+    }
+    
+    .payment__title {
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: -0.2px;
+    }
+    
+    .payment__grid-item {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 16px;
+    }
+
+    .payment__information {
+        margin-top: 24px;
+    }
+    
+    .payment__grid__amount {
+        position: absolute;
+        width: 12px;
+        height: 16px;
+        top: -12px;
+        left: 32px;
+        border-radius: 16px;
+        transform: rotate(0.065deg);
+        padding: 1px 4px 0px 4px;
+        background-color: var(--color-orange);
+        color: var(--white-text);
+        text-align: center;
+        font-family: Segoe UI;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px;
+    }
+    
+    .payment__info {
+        display: flex;
+    }
+}

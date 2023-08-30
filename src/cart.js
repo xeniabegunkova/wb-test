@@ -22,7 +22,7 @@ const generateCart = () => {
 			<h5 class="card__title">${name}</h5>
 			<div class="card__item">
 				<p class="card__items">${color}</p>
-				<p class="card__items">${size}</p>
+				<p class="card__items size">${size}</p>
 			</div>
 			<p class="card__items grey">${stock}</p>
 			<div class="grey__container">
@@ -31,6 +31,7 @@ const generateCart = () => {
 			</div>
 		</div>
 	
+		<div class="card__counter-one">
 		<div class="card__counter">
 			<div class="counter">
 			<button onclick="decrement(${id})" 
@@ -57,6 +58,7 @@ const generateCart = () => {
 		<div class="card__price">
 			<p class="price">${price} сом</p>
 			<p class="price-sale">${sale} сом</p>
+		</div>
 		</div>
 	</div>
 		`
@@ -149,6 +151,7 @@ const update = (id) => {
 	const item = basket.find((x) => x.id === id);
 	document.getElementById(id).innerHTML = item.item;
 	calculation();
+	footerCalc();
 	TotalAmount();
 	changeText();
 	generateCart();
@@ -160,5 +163,12 @@ const calculation = () => {
 }
 
 calculation(); //everytime update calculation is work
+
+const footerCalc = () => {
+	const iconCartFooter = document.getElementById('footer-amount');
+	iconCartFooter.innerHTML = basket.map((x) => x.item).reduce((x, y) => x + y, 0);
+}
+
+footerCalc();
 
 

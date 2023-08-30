@@ -7,6 +7,7 @@
     --color-red: #FF3B30;
     --price-sale: #A0A0A4;
     --color-green: #0CB477;
+    --color-i: #F0ECF4;
 }
 
 .card__grid-two {
@@ -213,4 +214,46 @@
 .cart__payment-agree_img {
     width: 13px;
     height: 24px;
+}
+
+@media screen and (max-width: 900px) {
+    .card__grid-two {
+        width: 100%;
+    }
+    
+    .cart__about {
+        margin: 8px 16px 16px;
+    }
+    
+    .cart__delivery {
+        display: none;
+    }
+    
+    .cart__information {
+        margin: 24px 16px 16px;
+        padding: 8px 8px 12px;
+        background-color: var(--color-i);
+    }
+    
+    .cart__details-title {
+        display: none;
+    }
+    
+    .cart__payment-card {
+        display: none;
+    }
+    
+    .cart__payment-button {
+        width: 228px;
+    }
+    
+    .cart__payment-agree {
+        display: flex;
+        margin: 0 24px 24px;
+    }
+    
+    .cart__payment-agree_img {
+        width: 13px;
+        height: 24px;
+    }
 }
